@@ -14,3 +14,6 @@ jobs:
 
       - name: Setup node
         run: sudo apt install -y nodejs npm
+
+      - name: Build site
+        run: npm install && npm run build
