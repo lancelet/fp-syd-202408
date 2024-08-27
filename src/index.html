@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Diagrams in Elm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5,
+        .reveal h6 {
+            font-family: "IBM Plex Sans", sans-serif;
+        }
+
+        .reveal p,
+        .reveal li {
+            font-family: "IBM Plex Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Interactive Diagrams in Elm</h1>
+                <p>Jonathan Merritt</p>
+                <p>Sydney Functional Programming Group</p>
+                <p>August 2024</p>
+                <button class="fullscreenButton">Go Fullscreen</button>
+            </section>
+            <section>
+                <h2>About Me</h2>
+                <ul>
+                    <li class="fragment fade-in">Looking for a job</li>
+                    <li class="fragment fade-in">FP experience: Haskell, Scala, Clojure</li>
+                    <li class="fragment fade-in">Non-FP: Rust, C/C++, OpenCL, CUDA, Python</li>
+                    <li class="fragment fade-in">Deep-learning experience</li>
+                    <li class="fragment fade-in">
+                        Work: Academia, Bank, Self-driving startup
+                    </li>
+                    <li class="fragment fade-in">Regular runner</li>
+                    <li class="fragment fade-in">Play 2 kinds of bagpipe</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Diagrams: Motivation</h2>
+                <ul>
+                    <p>Can we have nice interactive diagrams on blog pages?</p>
+                </ul>
+            </section>
+            <section>
+                <h2>Elm</h2>
+                <ul>
+                    <li class="fragment fade-in">FP language</li>
+                    <li class="fragment fade-in">Strict evaluation</li>
+                    <li class="fragment fade-in">Haskell-like syntax</li>
+                    <li class="fragment fade-in">Very (overly?) pure</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Requirements</h2>
+                <ol>
+                    <li class="fragment fade-in">Handles coordinate transformations</li>
+                    <li class="fragment fade-in">Consistent line width + arrow heads</li>
+                    <li class="fragment fade-in">Mouse in useful coordinate system</li>
+                    <li class="fragment fade-in">Ergonomic</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Demo 1</h2>
+                <div id="spring-demo"></div>
+            </section>
+            <section>
+                <h2>Demo 2</h2>
+                <div id="carts-demo"></div>
+            </section>
+            <section>
+                <h2>How Big?</h2>
+                <ul>
+                    <li class="fragment fade-in">Demos: 45 kB minified JS</li>
+                    <li class="fragment fade-in">(Reveal.js: 108 kB minified JS)</li>
+                    <li class="fragment fade-in">(HelloWorld.hs.wasm: 928 kB)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Approach</h2>
+                <ul>
+                    <li class="fragment fade-in">Graphics expression tree</li>
+                    <li class="fragment fade-in">Transforms and styles inherited</li>
+                    <li class="fragment fade-in">Depth-first eval; push-down stuff</li>
+                    <li class="fragment fade-in">Manual path transformation</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Quick Code Tour</h2>
+                <button class="fullscreenButton">Go Fullscreen</button>
+            </section>
+            <section>
+                <h2>Future Work</h2>
+                <ul>
+                    <li class="fragment fade-in">Release it</li>
+                    <li class="fragment fade-in">Text</li>
+                    <li class="fragment fade-in">Authoring tools</li>
+                    <li class="fragment fade-in">"3Blue1Brown" stuff</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script type="module" src="Main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+[submodule "techdraw"]
+	path = techdraw
+	url = git@github.com:lancelet/techdraw.git
