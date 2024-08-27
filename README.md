@@ -5,7 +5,7 @@
 To compile this presentation:
 
 ```
-git clone --recurse-submodules ...
+git clone --recurse-submodules git@github.com:lancelet/fp-syd-202408.git
 npm install
 npm run start    # Run the development server
 npm run build    # Build the deployable project
